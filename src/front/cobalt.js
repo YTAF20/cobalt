@@ -428,7 +428,8 @@ const resetSettings = () => {
     window.location.reload();
 }
 
-const download = async(url) => {
+const download = async(url, source) => {
+    if (source !== 'tiktok') return; // Exit if the source is not TikTok
     changeDownloadButton("disabled", '...');
 
     eid("url-clear").style.display = "none";
